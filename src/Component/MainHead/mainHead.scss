@@ -1,0 +1,18 @@
+.MainHead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+    gap: 15px;
+    text-align: center;
+    h4{
+        font-weight: 300;
+        letter-spacing: 2px;
+        font-size: 13px;
+    }
+    h1{
+        font-size: 40px;
+        font-weight: 600;
+    }
+}

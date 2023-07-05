@@ -1,0 +1,124 @@
+.Navbar{
+    width: 100%;
+    a.active{
+        color: var(--mcolor);
+        position: relative;
+                ::before{
+                    content: '';
+                    position: absolute;
+                    width: 0%;
+                    height: 1px;
+                    background-color: var(--mcolor);
+                    bottom: -7px;
+                    transition: 0.5s;
+                }
+                &:hover ::before{
+                    width: 100%;
+                }
+                .num{
+                    color: black;
+                }
+    }
+    .main{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 50px;
+        @media (max-width:767px) {
+            padding: 20px;
+        }
+        border-bottom: 1px solid #000;
+        gap: 30px;
+        @media (max-width:767px) {
+            justify-content: space-evenly;
+        }
+        @media (max-width:500px) {
+            flex-direction: column;
+        }
+        .left{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .image{
+                width: 100px;
+            }
+        }
+        .center{
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            @media (max-width:767px) {
+                display: none;
+            }
+            .item{
+                text-transform: uppercase;
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+        }
+        .right{
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            .icon{
+                cursor: pointer;
+                font-size: 20px;
+                position: relative;
+                .num{
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    background-color: var(--mcolor);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    bottom: 0;
+                    right: -7px;
+                    border-radius: 50%;
+                    font-size: 12px;
+                }
+            }
+            .search{
+                cursor: pointer;
+                font-size: 20px;
+                @media (max-width:767px) {
+                    display: none;
+                }
+            }
+        }
+        .menu{
+            cursor: pointer;
+            font-size: 25px;
+            display: none;
+            color: var(--mcolor);
+            @media (max-width:767px) {
+                display: block;
+            }
+        }
+        
+        .hide{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            top: 0px;
+            left: 0;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 50px;
+            transition: 0.5s;
+            z-index: 999;
+            @media (min-width:767px) {
+                display: none;
+            }
+            .item{
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-size: 30px;
+            }
+        }
+    }
+}

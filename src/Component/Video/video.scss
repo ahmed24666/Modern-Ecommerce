@@ -1,0 +1,39 @@
+.Video{
+    height: 500px;
+    position: relative;
+    video{
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .text{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+        h1{
+            font-size: 70px;
+            font-weight: 600;
+            color: white;
+            @media (max-width:767px) {
+                font-size: 40px;
+            }
+        }
+        .button{
+            background-color: white;
+            padding: 15px;
+            letter-spacing: 2px;
+            font-size: 13px;
+            cursor: pointer;
+            &:hover{
+                background-color: var(--mcolor);
+                color: white;
+            }
+        }
+    }
+}

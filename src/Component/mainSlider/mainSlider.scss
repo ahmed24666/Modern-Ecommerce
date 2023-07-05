@@ -1,0 +1,93 @@
+.MainSlider{
+    ////
+    .arrow{
+        color: var(--mcolor);
+        font-size: 30px;
+        margin: 30px;
+        cursor: pointer;
+        &:hover{
+            color: white;
+        }
+        @media (max-width:767px) {
+            display: none;
+        }
+    }
+    .paging-item.active{
+        circle{
+            fill: var(--mcolor) !important;        }
+    }
+    /////
+    .slide{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        height: 80vh;
+        width: 100%;
+        color: white;
+        h1{
+            font-size: 80px;
+            line-height: 90px;
+            font-weight: 600;
+            letter-spacing: 0px;
+            @media (max-width:767px) {
+                font-size: 60px;
+                line-height: 60px;
+            }
+        }
+        h2{
+            font-size: 50px;
+            line-height: 50px;
+            font-weight: 600;
+            letter-spacing: 0px;
+            @media (max-width:767px) {
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+        .button{
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            padding: 20px;
+            border: 2px solid white;
+            position: relative;
+            z-index: 1;
+            cursor: pointer;
+            &::before{
+                content: '';
+                position: absolute;
+                width:0%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: var(--mcolor);
+                transition: 0.5s;
+                z-index: -1;
+            }
+            &:hover::before{
+                width: 100%;
+            }
+            &:hover{
+                border-color: var(--mcolor);
+            }
+        }
+    }
+    .slide1{
+        background-image: url('./../../../public/images/slider/slider-10-2.webp');
+        background-size: cover;
+        background-position: center;
+    }
+    .slide2{
+        background-image: url('./../../../public/images/slider/slider-10.webp');
+        background-size: cover;
+        background-position: center;
+    }
+    .slide3{
+       background-image: url('./../../../public/images/slider/slider-10-1.webp'); 
+       background-size: cover;
+       background-position: center;
+    }
+}

@@ -1,0 +1,44 @@
+.Section1{
+    display: flex;
+    gap: 30px;
+    padding: 50px;
+    @media (max-width:767px) {
+        flex-direction: column;
+        gap: 15px;
+        padding: 30px;
+    }
+    .item{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .image{
+            height: 400px;
+            @media (max-width:500px) {
+                height: 300px;
+            }
+        }
+        h1{
+            font-weight: 500;
+            font-size: 25px;
+            letter-spacing: 1px;
+        }
+        p{
+            letter-spacing: 1px;
+            color: var(--pale);
+        }
+        .button{
+            padding:15px 20px;
+            border: 1px solid var(--mcolor);
+            color: var(--mcolor);
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover{
+                color: white;
+                background-color: var(--mcolor);
+            }
+        }
+    }
+}

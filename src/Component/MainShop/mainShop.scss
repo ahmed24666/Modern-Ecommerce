@@ -1,0 +1,10 @@
+.MainShop{
+    display: flex;
+    @media (max-width:900px) {
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}

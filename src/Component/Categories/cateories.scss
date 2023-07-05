@@ -1,0 +1,38 @@
+.Categories{
+    background-image: url('./../../../public/images/secbg.webp');
+    overflow: hidden;
+    padding-bottom: 50px;
+    .slick-slider{
+        padding: 0 50px;
+        margin-bottom: 30px;
+        @media (max-width:767px) {
+            margin-bottom: 0;
+            padding: 0 20px;
+        }
+        .slick-active {
+            button{
+                background-color: var(--mcolor);
+                border-radius: 50%;
+            }
+        }
+    }
+    .slide{
+        position: relative;
+        .button{
+            position: absolute;
+            left: -50%;
+            bottom: 0px;
+            margin:0 auto;
+            transform: translateX(-50%);
+            padding: 10px;
+            color: black !important;
+            background-color: white;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            font-weight: 300;
+            cursor: pointer;
+            max-width: 70%;
+            text-align: center;
+        }
+    }  
+}
